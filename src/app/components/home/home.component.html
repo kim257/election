@@ -1,0 +1,65 @@
+<div class="form">
+  <div class="thumbnail">
+    <img src="../assets/img/logo.png"/>
+  </div>
+  <form class="class-form">
+    <h4>นักเรียนชั้น</h4>
+    <div class="radio__container">
+      <div class="radio-inline">
+        <input class="radio" id="class3" name="class" type="radio" value="3" [(ngModel)]="class">
+        <label class="radio__label" for="class3">ป. 3</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="class4" name="class" type="radio" value="4" [(ngModel)]="class">
+        <label class="radio__label" for="class4">ป. 4</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="class5" name="class" type="radio" value="5" [(ngModel)]="class">
+        <label class="radio__label" for="class5">ป. 5</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="class6" name="class" type="radio" value="6" [(ngModel)]="class">
+        <label class="radio__label" for="class6">ป. 6</label>
+      </div>
+    </div>
+    <br>
+    <h4>ห้อง</h4>
+    <div class="radio__container">
+      <div class="radio-inline">
+        <input class="radio" id="room1" name="room" type="radio" value="1" [(ngModel)]="room">
+        <label class="radio__label" for="room1">1</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room2" name="room" type="radio" value="2" [(ngModel)]="room">
+        <label class="radio__label" for="room2">2</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room3" name="room" type="radio" value="3" [(ngModel)]="room">
+        <label class="radio__label" for="room3">3</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room4" name="room" type="radio" value="4" [(ngModel)]="room">
+        <label class="radio__label" for="room4">4</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room5" name="room" type="radio" value="5" [(ngModel)]="room">
+        <label class="radio__label" for="room5">5</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room6" name="room" type="radio" value="6" [(ngModel)]="room">
+        <label class="radio__label" for="room6">6</label>
+      </div>
+      <div class="radio-inline">
+        <input class="radio" id="room7" name="room" type="radio" value="7" [(ngModel)]="room">
+        <label class="radio__label" for="room7">7</label>
+      </div>
+    </div>
+    <br>
+    <div class="text-right">
+      <button (click)="gotoDetail()" [class.disabled]="room == null || class == null"
+              [disabled]="room == null || class == null">
+        ต่อไป >
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,44 @@
+<div>
+  <div class="detail-form" id="detail.formName">
+    <!-- {{detail.formName}} -->
+    <h4 class="text-center">ตัวแทนห้อง {{room}}</h4>
+    <br>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let party of detailParty;">
+        <div class="content text-center">
+          <img [class.selectImg]="party.partyName == dataService.selectedList[indexList]" type="image" width="200"
+               src="{{party.img}}"
+               (click)="select(party.partyName,indexList)">
+          <div class="footer">
+            <hr>
+            <div class="stats">
+              {{party.name}}
+              <br>
+              <br>
+              <h4>
+                {{party.partyName}}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <label>* หมายเหตุ : การเลือกตั้งกรรมการสภานักเรียนจะมีทั้งหมด 21 หน้า สามารถเลือกได้หน้าละ 1 คน
+        โดยใช้นิ้วสัมผัสที่รูปหน้าคนที่ต้องการเลือก
+      </label>
+    </div>
+    <form class="class-form">
+      <div class="text-right d-flex justify-content-end">
+        <button type="button" (click)="previousClass()" [class.disabled]="indexList ===0" [disabled]="indexList ===0" hidden><
+          ก่อนหน้า
+        </button>
+        <button type="button" (click)="nextClass()" [class.disabled]="dataService.selectedList[indexList] === undefined"
+                [disabled]="dataService.selectedList[indexList] === undefined">
+          ต่อไป >
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

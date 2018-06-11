@@ -1,0 +1,7 @@
+.selectImgg {
+  border: #BE5877 1px;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
