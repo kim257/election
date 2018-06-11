@@ -1,1 +1,256 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background: #ccc;
+  font-family: 'Muli', 'Athiti', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  ;
+  width: 100%;
+  height: 100%;
+}
+
+/* Form */
+
+input:focus {
+  background-color: yellow;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 500px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /* text-align: center; */
+}
+
+.detail-form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 750px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /* text-align: center; */
+}
+
+.selectImg {
+  border: 5px solid #BE5877 !important;
+  box-shadow: 0 0 3px #BE5877 !important;
+  -moz-box-shadow: 0 0 3px #BE5877 !important;
+  -webkit-box-shadow: 0 0 3px #BE5877 !important;
+  outline-offset: 0px !important;
+  outline: none !important;
+}
+
+.form .thumbnail {
+  background: #EAAFC5;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  padding: 20px 20px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  box-sizing: border-box;
+}
+
+.form .thumbnail img {
+  display: block;
+  width: 100%;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+button {
+  outline: 0;
+  background: #EAAFC5;
+  width: 30%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+label {
+  padding: 15px;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+
+span a {
+  color: #BE5877;
+  text-decoration: none;
+}
+
+span .fa {
+  color: #EAAFC5;
+}
+
+/* END Form */
+
+/* Demo Purposes */
+
+.wrapper {
+  max-width: 100%;
+  /* padding: 35px 0; */
+  margin: 0 auto;
+}
+
+.radio,
+.radio__label,
+.radio__label:after,
+.radio__label:before {
+  box-sizing: border-box;
+}
+
+.radio__container:nth-child(1) {
+  padding-bottom: 35px;
+  margin-bottom: 28px;
+  border-bottom: 1px dotted #dbdbdb;
+}
+
+.radio__container .radio-inline {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.radio__container .radio {
+  display: inline;
+  opacity: 0;
+  width: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-appearance: none;
+}
+
+.radio__container .radio__label {
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  padding: 15px 10px 15px 28px;
+  cursor: pointer;
+  vertical-align: bottom;
+  color: rgba(0, 0, 0, 0.54);
+  font: 300 14px/20px Helvetica, Arial, sans-serif;
+  transition: color 200ms ease;
+}
+
+.radio__container .radio__label:before,
+.radio__container .radio__label:after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  transition: border-color 200ms ease, -webkit-transform 200ms ease;
+  transition: transform 200ms ease, border-color 200ms ease;
+  transition: transform 200ms ease, border-color 200ms ease, -webkit-transform 200ms ease;
+}
+
+.radio__container .radio__label:before {
+  left: 0;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dbdbdb;
+}
+
+.radio__container .radio__label:after {
+  top: 20px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background-color: #EAAFC5;
+}
+
+.radio__container .radio__label:hover {
+  color: #EAAFC5;
+}
+
+.radio__container .radio__label:hover:before {
+  border-color: #BE5877;
+}
+
+.radio__container .radio:checked+.radio__label {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.radio__container .radio:checked+.radio__label:before {
+  border-color: #EAAFC5;
+}
+
+.radio__container .radio:checked+.radio__label:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

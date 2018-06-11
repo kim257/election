@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  url: 'http://192.168.1.17/test001.php'
+}
+
 
 /*
  * In development mode, to ignore zone related error stack frames such as
